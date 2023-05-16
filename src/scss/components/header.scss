@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'mixins';
+
+.header {
+   border: 1px solid $black-color;
+   padding: 15px 0;
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   z-index: 100;
+
+   .container {
+      @include flex-all-sb();
+   }
+
+   .nav__list {
+      @include flex-all-sb();
+      gap: 20px;
+   }
+
+   .nav__link {
+      @include font-nav();
+
+      &:hover {
+         @include font-hover();
+      }
+   }
+
+}

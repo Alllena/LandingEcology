@@ -1,0 +1,52 @@
+@import 'variables';
+
+@mixin font-face($family, $size, $color, $weight: 500) {
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  font-display: swap;
+}
+
+@mixin font-gradient($text-gradient: $gradient) {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: $text-gradient;
+}
+
+@mixin font-main() {
+  @include font-face($main-font-family, 42px, $black-color, 900)
+}
+
+@mixin font-title() {
+  @include font-face($main-font-family, 40px, $black-color, 500)
+}
+
+@mixin font-subtitle() {
+  @include font-face($main-font-family, 38px, $black-color, 500)
+}
+
+@mixin font-logo() {
+  @include font-face($main-font-family, 24px, $green-color, 400)
+}
+
+@mixin font-nav() {
+  @include font-face($main-font-family, 18px, $black-color, 800)
+}
+
+@mixin font-primary() {
+  @include font-face($main-font-family, 16px, $black-color, 600)
+}
+
+@mixin font-button() {
+  @include font-face($main-font-family, 16px, $black-color, 700)
+}
+
+@mixin font-small() {
+  @include font-face($main-font-family, 13px, $brown-color, 400)
+}
+
+@mixin font-hover() {
+  color: $brown-color;
+}

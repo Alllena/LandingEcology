@@ -1,0 +1,5 @@
+.logo {
+   @include flex-all-sb;
+   gap: 5px;
+   @include font-logo();
+}

@@ -1,0 +1,8 @@
+@import 'variables';
+
+.button {
+   background: $gradient;
+   padding: 12px 25px;
+   border-radius: 20px;
+   @include font-button();
+}

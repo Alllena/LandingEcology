@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet" />
+   <link rel="stylesheet" href="css/style.min.css">
+   <title>Главная</title>
+</head>
+
+<body>
+   <header class="header">
+   <div class="container">
+      <a class="logo" href="#">
+         <img src="img/logo.svg" alt="EcoPartner Logo">
+         <span>|</span>
+         <span>EcoPartner</span>
+      </a>
+      <nav class="nav" title="Main navigation">
+         <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+         </ul>
+      </nav>
+      <button class="button">Получить консультацию</button>
+   </div>
+</header>
+   <main>
+      <section class="section promo">
+   <div class="container">
+      <article class="article">
+         <h1 class="article__title">Помогаем бизнесу <span class="title__gradient">соответствовать экологическим нормам
+               и требованиям</span></h1>
+         <ul class="article__list">
+            <h4>Гарантируем</h4>
+            <li class="article__item"><img src="img/arrow.svg">Подход «под ключ»</li>
+            <li class="article__item"><img src="img/arrow.svg">Выделенного специалиста под ваши задачи</li>
+            <li class="article__item"><img src="img/arrow.svg">План работ с оптимизацией затрат</li>
+            <li class="article__item"><img src="img/arrow.svg">Соблюдение всех сроков согласно договора</li>
+            <li class="article__item"><img src="img/arrow.svg">Поэтапная оплата и полная конфиденциальность</li>
+         </ul>
+         <form action="">
+
+            <label class="promo__tel" for="phone-number">
+               <img src="img/phone.svg" alt="icon phone">
+               <input class="input" type="tel" id="phone-number" name="phone-number" placeholder="+375 (xx) xxx-xx-xx"
+                  pattern="\+375\s\(\d{2}\)\s\d{3}-\d{2}-\d{2}" required>
+               <span class="tel__flag">поле обязательное для заполнения</span>
+            </label>
+            <button class="button">Оставить заявку</button>
+         </form>
+      </article>
+      <img class="promo__img" src="img/promo.svg" alt="EcoPartner">
+   </div>
+</section>
+   </main>
+   <footer></footer>
+   <script src="js/app.min.js"></script>
+</body>
+
+</html>

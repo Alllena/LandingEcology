@@ -1,0 +1,32 @@
+/* stylelint-disable */
+
+@mixin input-tel {
+  height: 70px;
+  position: relative;
+  border-bottom: 1px solid $black-color;
+  padding: 10px 30px;
+
+
+  input {
+    @include font-primary();
+    text-transform: uppercase;
+    width: 310px;
+    height: 50px;
+  }
+
+  span {
+    position: absolute;
+    @include font-small();
+    left: 0;
+    top: 100%;
+  }
+
+  img {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 0;
+    top: 20%;
+  }
+
+}
