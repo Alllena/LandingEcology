@@ -54,10 +54,10 @@ body {
   background-color: $white-color;
 }
 
-.container {
+.wrapper {
   margin: 0 auto;
-  padding: 0 $container-offset;
-  max-width: $container-width;
+  padding: 0 $wrapper-offset;
+  max-width: $wrapper-width;
 }
 
 .section {
