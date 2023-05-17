@@ -2,43 +2,17 @@
 @import 'mixins';
 
 .promo {
-   backdrop-filter: blur(2.5px);
 
-   .container {
+   .promo__wrapper {
+      @include flex-column-start(40px);
       position: relative;
-      @include flex-all-sb;
-   }
-
-   .article__title {
-      width: 70%;
-      @include font-main();
-
-      span {
-         @include font-gradient();
-      }
    }
 
    .promo__img {
       position: absolute;
-      top: 20%;
+      top: 15%;
       right: 0;
-      width: 50%;
-   }
-
-   h4 {
-      @include font-primary();
-      text-transform: uppercase;
-      margin-bottom: 15px;
-   }
-
-   .article__item {
-      @include flex-v-center;
-      padding: 5px 0;
-
-      img {
-         height: 28px;
-         width: 28px;
-      }
+      width: 55%;
    }
 
    .promo__tel {

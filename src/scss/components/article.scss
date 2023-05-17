@@ -1,0 +1,30 @@
+.article {
+   .article__title_main {
+      width: 70%;
+      @include font-main();
+
+      span {
+         @include font-gradient();
+      }
+   }
+
+   .article__title {
+      @include font-title()
+   }
+
+   .article__subtitle {
+      @include font-primary();
+      text-transform: uppercase;
+      margin-bottom: 15px;
+   }
+
+   .article__item {
+      @include flex-v-center;
+      padding: 5px 0;
+
+      img {
+         height: 28px;
+         width: 28px;
+      }
+   }
+}
