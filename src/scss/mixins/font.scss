@@ -20,7 +20,7 @@
 }
 
 @mixin font-title() {
-  @include font-face($main-font-family, 40px, $black-color, 500)
+  @include font-face($main-font-family, 28px, $black-color, 900)
 }
 
 @mixin font-subtitle() {
@@ -37,6 +37,11 @@
 
 @mixin font-primary() {
   @include font-face($main-font-family, 16px, $black-color, 600)
+}
+
+@mixin font-text() {
+  @include font-face($main-font-family, 15px, $black-color, 600);
+  line-height: 130%;
 }
 
 @mixin font-button() {

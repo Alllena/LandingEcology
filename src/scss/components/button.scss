@@ -2,6 +2,8 @@
 
 .button {
    background: $gradient;
+   height: max-content;
+   width: max-content;
    padding: 12px 25px;
    border-radius: 20px;
    @include font-button();

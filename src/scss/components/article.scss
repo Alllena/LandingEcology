@@ -1,7 +1,11 @@
 .article {
+   width: 100%;
+   @include flex-column-start();
+
    .article__title_main {
       width: 70%;
       @include font-main();
+      margin-bottom: 40px;
 
       span {
          @include font-gradient();
@@ -9,13 +13,18 @@
    }
 
    .article__title {
-      @include font-title()
+      @include font-title();
+      margin-bottom: 30px;
    }
 
    .article__subtitle {
       @include font-primary();
       text-transform: uppercase;
       margin-bottom: 15px;
+   }
+
+   .article__text {
+      @include font-text();
    }
 
    .article__item {

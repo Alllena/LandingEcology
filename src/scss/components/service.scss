@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'mixins';
+
+.service {
+   .service__card {
+      @include flex-all-sb;
+      height: 90vh;
+      padding: 75px 100px;
+      gap: 100px;
+      border-radius: 30px;
+      -webkit-backdrop-filter: blur(10px) brightness(90%);
+      backdrop-filter: blur(10px) brightness(90%);
+      box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.15);
+   }
+
+   .service__slider,
+   .service__info {
+      flex: 1;
+      height: 100%;
+      display: grid;
+      grid-template-rows: 1fr auto;
+   }
+
+   .service__slider {
+      @include slider();
+      border-radius: 30px;
+      border: 3px solid $green-color;
+      box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.15);
+   }
+
+   .service__detail {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      height: 100%;
+      padding: 25px;
+   }
+
+   .service__name {
+      padding: 5px 0;
+      @include flex-v-center();
+      gap: 10px;
+      border-bottom: 1px solid $green-color;
+      margin-bottom: 20px;
+   }
+
+   .service__content {
+      @include flex-column-start();
+      @include font-text();
+   }
+
+   .servis__resalt {
+      border-top: 1px solid $green-color;
+   }
+}

@@ -63,8 +63,3 @@ body {
 .section {
   padding: 100px 0;
 }
-
-.article {
-  @include flex-column-start(50px);
-
-}
