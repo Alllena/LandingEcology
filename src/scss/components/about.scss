@@ -1,0 +1,34 @@
+.about-as {
+
+   .about-as__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr 1fr;
+      gap: 50px;
+   }
+
+   .about-as__title {
+      @include font-subtitle();
+      grid-column: 1 / 4;
+
+   }
+
+   .about-as__item {
+      @include flex-column-start(15px);
+      padding: 20px;
+      border-radius: 30px;
+      @include matte-glass();
+   }
+
+   .about-as__content_gradient {
+      font-weight: 500;
+   }
+
+   .about-as__img-container {
+      @include flex-all-center;
+      height: 60px;
+      width: 60px;
+      border-radius: 10px;
+      box-shadow: $shadow;
+   }
+}

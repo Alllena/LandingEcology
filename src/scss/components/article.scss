@@ -24,10 +24,11 @@
    }
 
    .article__text {
-      @include font-text();
+      line-height: 130%;
    }
 
    .article__item {
+      @include font-list();
       @include flex-v-center;
       padding: 5px 0;
 

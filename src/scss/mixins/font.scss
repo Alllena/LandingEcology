@@ -13,6 +13,10 @@
   -webkit-background-clip: text;
   color: transparent;
   background-image: $text-gradient;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.5px $pink-color;
+  text-stroke: 0.5px $pink-color;
+
 }
 
 @mixin font-main() {
@@ -24,7 +28,7 @@
 }
 
 @mixin font-subtitle() {
-  @include font-face($main-font-family, 38px, $black-color, 500)
+  @include font-face($main-font-family, 38px, $black-color, 900)
 }
 
 @mixin font-logo() {
@@ -36,12 +40,13 @@
 }
 
 @mixin font-primary() {
-  @include font-face($main-font-family, 16px, $black-color, 600)
+  @include font-face($main-font-family, 16px, $black-color, 600);
 }
 
-@mixin font-text() {
-  @include font-face($main-font-family, 15px, $black-color, 600);
-  line-height: 130%;
+@mixin font-list() {
+  @include font-face($main-font-family, 18px, $black-color, 600);
+  -webkit-text-stroke: 0.5px $black-color;
+  text-stroke: 0.5px $black-color;
 }
 
 @mixin font-button() {
