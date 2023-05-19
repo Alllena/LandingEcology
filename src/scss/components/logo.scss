@@ -1,5 +1,5 @@
 .logo {
    @include flex-all-sb;
    gap: 5px;
-   @include font-logo();
+   @include font-face($size: 24px, $color: $green-color);
 }

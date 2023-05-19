@@ -4,7 +4,7 @@
 
    .article__title_main {
       width: 70%;
-      @include font-main();
+      @include font-face(42px, 900);
       margin-bottom: 40px;
 
       span {
@@ -13,12 +13,12 @@
    }
 
    .article__title {
-      @include font-title();
+      @include font-face(30px, 900);
       margin-bottom: 30px;
    }
 
    .article__subtitle {
-      @include font-primary();
+      @include font-face();
       text-transform: uppercase;
       margin-bottom: 15px;
    }
@@ -28,7 +28,8 @@
    }
 
    .article__item {
-      @include font-list();
+      @include font-stroke();
+      @include font-face(18px, 600);
       @include flex-v-center;
       padding: 5px 0;
 

@@ -1,6 +1,6 @@
 @import 'variables';
 
-@mixin font-face($family, $size, $color, $weight: 500) {
+@mixin font-face($size: 16px, $weight: normal, $color: $black-color, $family: $main-font-family) {
   font-family: $family;
   font-size: $size;
   color: $color;
@@ -16,45 +16,11 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.5px $pink-color;
   text-stroke: 0.5px $pink-color;
-
 }
 
-@mixin font-main() {
-  @include font-face($main-font-family, 42px, $black-color, 900)
-}
-
-@mixin font-title() {
-  @include font-face($main-font-family, 28px, $black-color, 900)
-}
-
-@mixin font-subtitle() {
-  @include font-face($main-font-family, 38px, $black-color, 900)
-}
-
-@mixin font-logo() {
-  @include font-face($main-font-family, 24px, $green-color, 400)
-}
-
-@mixin font-nav() {
-  @include font-face($main-font-family, 18px, $black-color, 800)
-}
-
-@mixin font-primary() {
-  @include font-face($main-font-family, 16px, $black-color, 600);
-}
-
-@mixin font-list() {
-  @include font-face($main-font-family, 18px, $black-color, 600);
+@mixin font-stroke() {
   -webkit-text-stroke: 0.5px $black-color;
   text-stroke: 0.5px $black-color;
-}
-
-@mixin font-button() {
-  @include font-face($main-font-family, 16px, $black-color, 700)
-}
-
-@mixin font-small() {
-  @include font-face($main-font-family, 13px, $brown-color, 400)
 }
 
 @mixin font-hover() {

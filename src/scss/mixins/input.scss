@@ -6,7 +6,7 @@
 
 
   input {
-    @include font-primary();
+    @include font-face();
     text-transform: uppercase;
     width: 310px;
     height: 50px;
@@ -14,7 +14,7 @@
 
   span {
     position: absolute;
-    @include font-small();
+    @include font-face(13px, $color: $brown-color);
     left: 0;
     top: 100%;
   }

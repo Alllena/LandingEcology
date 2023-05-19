@@ -20,7 +20,7 @@
    }
 
    .nav__link {
-      @include font-nav();
+      @include font-face(18px);
 
       &:hover {
          @include font-hover();

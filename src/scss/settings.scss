@@ -50,7 +50,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  @include font-primary();
+  @include font-face();
   background-color: $white-color;
 }
 
