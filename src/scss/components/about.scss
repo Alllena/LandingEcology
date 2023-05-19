@@ -8,7 +8,7 @@
    }
 
    .about-as__title {
-      @include font-subtitle();
+      @include font-face(40px, 900);
       grid-column: 1 / 4;
 
    }

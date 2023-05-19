@@ -50,7 +50,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   color: #424242;
-  font-weight: 600;
+  font-weight: normal;
   font-display: swap;
   background-color: #FDFAEC;
 }
@@ -99,7 +99,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 18px;
   color: #424242;
-  font-weight: 800;
+  font-weight: normal;
   font-display: swap;
 }
 .header .nav__link:hover {
@@ -115,8 +115,10 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   color: #424242;
-  font-weight: 700;
+  font-weight: normal;
   font-display: swap;
+  -webkit-text-stroke: 0.5px #424242;
+  text-stroke: 0.5px #424242;
 }
 
 .logo {
@@ -127,7 +129,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 24px;
   color: #009900;
-  font-weight: 400;
+  font-weight: normal;
   font-display: swap;
 }
 
@@ -140,10 +142,11 @@ body {
   position: relative;
 }
 .promo .promo__img {
-  position: absolute;
+  position: fixed;
   top: 10%;
-  right: 0;
-  width: 45%;
+  right: 8%;
+  width: 40%;
+  z-index: -1;
 }
 .promo .promo__tel {
   height: 70px;
@@ -155,7 +158,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   color: #424242;
-  font-weight: 600;
+  font-weight: normal;
   font-display: swap;
   text-transform: uppercase;
   width: 310px;
@@ -166,7 +169,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
   color: #e62314;
-  font-weight: 400;
+  font-weight: normal;
   font-display: swap;
   left: 0;
   top: 100%;
@@ -302,7 +305,7 @@ body {
 }
 .article .article__title {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 28px;
+  font-size: 30px;
   color: #424242;
   font-weight: 900;
   font-display: swap;
@@ -312,7 +315,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   color: #424242;
-  font-weight: 600;
+  font-weight: normal;
   font-display: swap;
   text-transform: uppercase;
   margin-bottom: 15px;
@@ -321,13 +324,13 @@ body {
   line-height: 130%;
 }
 .article .article__item {
+  -webkit-text-stroke: 0.5px #424242;
+  text-stroke: 0.5px #424242;
   font-family: "Nunito Sans", sans-serif;
   font-size: 18px;
   color: #424242;
   font-weight: 600;
   font-display: swap;
-  -webkit-text-stroke: 0.5px #424242;
-  text-stroke: 0.5px #424242;
   display: flex;
   align-items: center;
   padding: 5px 0;
@@ -345,7 +348,7 @@ body {
 }
 .about-as .about-as__title {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 38px;
+  font-size: 40px;
   color: #424242;
   font-weight: 900;
   font-display: swap;
@@ -374,4 +377,86 @@ body {
   width: 60px;
   border-radius: 10px;
   box-shadow: inset 0.2rem 0.2rem 0.5rem #777, inset -0.2rem -0.2rem 0.5rem #aaa, 0 2px 2px #666;
+}
+
+.consultation {
+  border-top: 1px solid #009900;
+  border-bottom: 1px solid #009900;
+  position: relative;
+}
+.consultation::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  width: 70px;
+  height: 70px;
+  background-image: url("../../img/globe.svg");
+  background-size: cover;
+  animation: rotate 20s linear infinite;
+  transform-origin: center center;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.consultation .consultation__title {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 40px;
+  color: #424242;
+  font-weight: 900;
+  font-display: swap;
+  margin-bottom: 20px;
+}
+.consultation .consultation__content {
+  display: flex;
+  align-items: end;
+  gap: 70px;
+}
+.consultation .consultation__content .consultation__text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 24px;
+  color: #424242;
+  font-weight: 600;
+  font-display: swap;
+  flex: 1;
+}
+.consultation .promo__tel {
+  height: 70px;
+  position: relative;
+  border-bottom: 1px solid #424242;
+  padding: 10px 30px;
+  flex: 1;
+}
+.consultation .promo__tel input {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: #424242;
+  font-weight: normal;
+  font-display: swap;
+  text-transform: uppercase;
+  width: 310px;
+  height: 50px;
+}
+.consultation .promo__tel span {
+  position: absolute;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 13px;
+  color: #e62314;
+  font-weight: normal;
+  font-display: swap;
+  left: 0;
+  top: 100%;
+}
+.consultation .promo__tel img {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: 0;
+  top: 20%;
 }

@@ -1,0 +1,49 @@
+.consultation {
+   border-top: 1px solid $green-color;
+   border-bottom: 1px solid $green-color;
+   position: relative;
+
+   &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 3%;
+      left: 10%;
+      width: 70px;
+      height: 70px;
+      background-image: url("../../img/globe.svg");
+      background-size: cover;
+      animation: rotate 20s linear infinite;
+      transform-origin: center center;
+   }
+
+   @keyframes rotate {
+      0% {
+         transform: rotate(0deg);
+      }
+
+      100% {
+         transform: rotate(360deg);
+      }
+   }
+
+   .consultation__title {
+      @include font-face(40px, 900);
+      margin-bottom: 20px;
+   }
+
+   .consultation__content {
+      @include flex-start-end();
+      gap: 70px;
+
+      .consultation__text {
+         @include font-face(24px, $weight: 600);
+         flex: 1;
+      }
+   }
+
+   .promo__tel {
+      @include input-tel();
+      flex: 1;
+   }
+}
