@@ -2,6 +2,11 @@
   display: flex;
 }
 
+@mixin flex-start-end {
+  display: flex;
+  align-items: end;
+}
+
 @mixin flex-v-center {
   display: flex;
   align-items: center;
