@@ -44,6 +44,20 @@ img {
   object-fit: cover;
 }
 
+details,
+details summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
 body {
   height: 100%;
   -webkit-text-size-adjust: 100%;

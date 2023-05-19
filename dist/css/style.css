@@ -41,6 +41,20 @@ img {
   object-fit: cover;
 }
 
+details,
+details summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
 body {
   height: 100%;
   -webkit-text-size-adjust: 100%;
@@ -381,7 +395,6 @@ body {
 
 .consultation {
   border-top: 1px solid #009900;
-  border-bottom: 1px solid #009900;
   position: relative;
 }
 .consultation::after {
@@ -459,4 +472,73 @@ body {
   position: absolute;
   left: 0;
   top: 20%;
+}
+
+.questions {
+  -webkit-backdrop-filter: blur(10px) brightness(90%);
+  backdrop-filter: blur(10px) brightness(90%);
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.15);
+}
+.questions .questions__title {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 40px;
+  color: #424242;
+  font-weight: 900;
+  font-display: swap;
+  margin-bottom: 20px;
+}
+.questions .questions__text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 24px;
+  color: #424242;
+  font-weight: 600;
+  font-display: swap;
+  margin-bottom: 20px;
+}
+.questions .questions__container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 0px;
+  margin-bottom: 20px;
+}
+.questions .questions__item {
+  display: block;
+  width: 70%;
+  border-top: 1px solid #424242;
+  border-left: 1px solid #424242;
+  border-right: 1px solid #424242;
+  overflow: hidden;
+  padding: 10px;
+}
+.questions .questions__item:last-child {
+  border-bottom: 1px solid #424242;
+}
+.questions .questions__item_hidden {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  color: #424242;
+  font-weight: 600;
+  font-display: swap;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 0;
+  position: relative;
+}
+.questions .questions__item_hidden::before {
+  top: calc(50% - 10px);
+  right: 15px;
+  background: url(../../img/arrow_down.svg) no-repeat 50% 50%/20px 13px;
+  width: 20px;
+  height: 20px;
+  content: "";
+  position: absolute;
+  transition: transform 0.5s;
+}
+.questions .questions__item[open] > .questions__item_hidden:before {
+  transform: rotate(-90deg);
+}
+.questions .questions__item_hidden ~ * {
+  padding: 10px 10px 10px 10px;
 }
