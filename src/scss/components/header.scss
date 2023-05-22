@@ -2,13 +2,20 @@
 @import 'mixins';
 
 .header {
-   border: 1px solid $black-color;
+   border-bottom: 1px solid $black-color;
    padding: 15px 0;
-   position: absolute;
+   position: fixed;
    left: 0;
    top: 0;
    right: 0;
-   z-index: 100;
+   z-index: 9999;
+   transition: transform 0.3s ease-in-out;
+   background-color: $white-color;
+   // @include matte-glass();
+
+   &.header-hidden {
+      transform: translateY(-100%);
+   }
 
    .header__wrapper {
       @include flex-all-sb();
@@ -26,5 +33,6 @@
          @include font-hover();
       }
    }
+
 
 }
