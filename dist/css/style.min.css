@@ -90,13 +90,18 @@ body {
 }
 
 .header {
-  border: 1px solid #424242;
+  border-bottom: 1px solid #424242;
   padding: 15px 0;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;
-  z-index: 100;
+  z-index: 9999;
+  transition: transform 0.3s ease-in-out;
+  background-color: #FDFAEC;
+}
+.header.header-hidden {
+  transform: translateY(-100%);
 }
 .header .header__wrapper {
   display: flex;
@@ -145,6 +150,7 @@ body {
   color: #009900;
   font-weight: normal;
   font-display: swap;
+  width: max-content;
 }
 
 .promo .promo__wrapper {
@@ -541,4 +547,88 @@ body {
 }
 .questions .questions__item_hidden ~ * {
   padding: 10px 10px 10px 10px;
+}
+
+.footer {
+  -webkit-backdrop-filter: blur(10px) brightness(90%);
+  backdrop-filter: blur(10px) brightness(90%);
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.15);
+  padding-top: 75px;
+  border-top: 1px solid #009900;
+}
+.footer::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 10%;
+  width: 300px;
+  height: 170px;
+  background: #f19e18;
+  filter: blur(170px);
+  transform: rotate(-70deg);
+  z-index: -1;
+}
+.footer .footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 30px;
+}
+.footer .footer__wrapper .logo {
+  grid-column: 1/3;
+}
+.footer .footer__wrapper .footer__copyright {
+  grid-column: 1/3;
+  justify-self: end;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 13px;
+  color: #424242;
+  font-weight: normal;
+  font-display: swap;
+  margin-bottom: 15px;
+}
+.footer h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: #424242;
+  font-weight: 700;
+  font-display: swap;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.footer .footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: start;
+  gap: 5px;
+}
+.footer .nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 5px;
+}
+.footer .contacts__link,
+.footer .nav__link {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: #424242;
+  font-weight: normal;
+  font-display: swap;
+}
+.footer .contacts__link:hover,
+.footer .nav__link:hover {
+  color: #e62314;
+}
+.footer .footer__social {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+}
+.footer .footer__social svg {
+  width: 25px;
+  height: 25px;
 }

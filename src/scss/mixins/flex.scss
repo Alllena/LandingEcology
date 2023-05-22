@@ -36,3 +36,11 @@
   justify-content: start;
   gap: $gap;
 }
+
+@mixin flex-column-end ($gap: 10px) {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: start;
+  gap: $gap;
+}
