@@ -3,7 +3,6 @@
 
 .header {
    border-bottom: 1px solid $black-color;
-   padding: 15px 0;
    position: fixed;
    left: 0;
    top: 0;
@@ -11,28 +10,15 @@
    z-index: 9999;
    transition: transform 0.3s ease-in-out;
    background-color: $white-color;
-   // @include matte-glass();
 
    &.header-hidden {
       transform: translateY(-100%);
    }
 
    .header__wrapper {
+      height: 100%;
       @include flex-all-sb();
+      background-color: $white-color;
    }
-
-   .nav__list {
-      @include flex-all-sb();
-      gap: 20px;
-   }
-
-   .nav__link {
-      @include font-face(18px);
-
-      &:hover {
-         @include font-hover();
-      }
-   }
-
 
 }

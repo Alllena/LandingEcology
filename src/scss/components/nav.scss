@@ -1,0 +1,58 @@
+.nav {
+   &.nav__main {
+      height: 90px;
+
+      .nav__sub-nav {
+         padding-right: 25px;
+         position: relative;
+
+         &::before {
+            top: 48%;
+            right: 10px;
+            background: url(../../img/arrow_down.svg) no-repeat 50% 50% / 10px 7px;
+            width: 10px;
+            height: 10px;
+            content: "";
+            position: absolute;
+            transition: transform .5s;
+         }
+
+
+         .nav__sub-list {
+            background-color: $white-color;
+            position: absolute;
+            left: -15px;
+            top: 100%;
+            width: max-content;
+            padding: 5px 15px 15px;
+            transition: transform 0.5s ease;
+            transform: translate(0, -100%);
+            z-index: -999;
+            @include flex-column-start;
+         }
+      }
+   }
+
+}
+
+.nav__list {
+   height: 100%;
+   @include flex-all-sb();
+   gap: 20px;
+
+
+
+   .nav__item {
+      height: 100%;
+   }
+
+   .nav__link {
+      @include flex-all-center;
+      height: 100%;
+      @include font-face(18px);
+
+      &:hover {
+         @include font-hover();
+      }
+   }
+}

@@ -1,15 +1,37 @@
-<header id="home" class="header">
+<header class="header">
    <div class="wrapper header__wrapper">
       <a class="logo" href="#">
          <img src="@img/logo.svg" alt="EcoPartner Logo">
          <span>|</span>
          <span>EcoPartner</span>
       </a>
-      <nav class="nav" title="Main navigation">
+      <nav class="nav nav__main">
          <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+            <li class="nav__item"><a href="#home" class="nav__link">Главная</a></li>
             <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
+            <li class="nav__item nav__sub-nav">
+               <a href="#monitor" class="nav__link ">Услуги</a>
+               <ul class="nav__sub-list">
+                  <li class="nav__item">
+                     <a href="#monitor" class="nav__link nav__sub-nav_link">Производственные наблюдения</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link nav__sub-nav_link">Отходы</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link nav__sub-nav_link">Атмосферный воздух</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link nav__sub-nav_link">Водные ресурсы</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link nav__sub-nav_link">Растительный мир</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link nav__sub-nav_link">Статистическая отчетность</a>
+                  </li>
+               </ul>
+            </li>
             <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
          </ul>
       </nav>
