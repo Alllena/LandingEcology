@@ -1,6 +1,6 @@
 .logo {
    @include flex-all-sb;
    gap: 5px;
-   @include font-face($size: 24px, $color: $green-color);
+   @include font-face($size: 24px, $color: $color-contrast);
    width: max-content;
 }

@@ -4,14 +4,16 @@ $wrapper-offset: 15px;
 $wrapper-width: calc($content-width + ($wrapper-offset * 2));
 
 // colors
-$green-color: #009900;
-$pink-color: #f19e18;
-$brown-color: #e62314;
-$black-color: #424242;
-$white-color: #FDFAEC;
+$color-contrast: #009900;
+$color-gradient-start: #e62314;
+$color-gradient-stop: #f19e18;
+$color-dark-primary: #000000;
+$color-dark-complementary: #424242;
+$color-light-primary: #FDFAEC;
+$color-light-complementary: #FFFFFF;
 
 // gradient
-$gradient: linear-gradient(90deg, #e62314 0%, #f19e18 100%);
+$gradient: linear-gradient(90deg, $color-gradient-start 0%, $color-gradient-stop 100%);
 
 
 $shadow: inset 0.2rem 0.2rem 0.5rem #777,

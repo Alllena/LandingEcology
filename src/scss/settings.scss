@@ -65,7 +65,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   @include font-face();
-  background-color: $white-color;
+  background-color: $color-light-primary;
 }
 
 .wrapper {

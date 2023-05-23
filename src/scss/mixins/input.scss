@@ -1,7 +1,7 @@
 @mixin input-tel {
   height: 70px;
   position: relative;
-  border-bottom: 1px solid $black-color;
+  border-bottom: 1px solid $color-dark-complementary;
   padding: 10px 30px;
 
 
@@ -14,7 +14,7 @@
 
   span {
     position: absolute;
-    @include font-face(13px, $color: $brown-color);
+    @include font-face(13px, $color: $color-gradient-start);
     left: 0;
     top: 100%;
   }

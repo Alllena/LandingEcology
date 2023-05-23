@@ -1,5 +1,5 @@
 .consultation {
-   border-top: 1px solid $green-color;
+   border-top: 1px solid $color-contrast;
    position: relative;
 
    &::after {
@@ -27,7 +27,7 @@
    }
 
    .consultation__title {
-      @include font-face(40px, 900);
+      @include font-face(40px, 900, $color: $color-dark-complementary);
       margin-bottom: 20px;
    }
 

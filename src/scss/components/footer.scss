@@ -1,7 +1,7 @@
 .footer {
    @include matte-glass();
    padding-top: 75px;
-   border-top: 1px solid $green-color;
+   border-top: 1px solid $color-contrast;
 
    &::after {
       display: block;
@@ -11,7 +11,7 @@
       left: 10%;
       width: 300px;
       height: 170px;
-      background: $pink-color;
+      background: $color-gradient-stop;
       filter: blur(170px);
       transform: rotate(-70deg);
       z-index: -1;

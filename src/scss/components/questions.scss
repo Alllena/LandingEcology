@@ -2,7 +2,7 @@
    @include matte-glass();
 
    .questions__title {
-      @include font-face(40px, 900);
+      @include font-face(40px, 900, $color: $color-dark-complementary);
       margin-bottom: 20px;
    }
 
@@ -20,14 +20,14 @@
    .questions__item {
       display: block;
       width: 70%;
-      border-top: 1px solid $black-color;
-      border-left: 1px solid $black-color;
-      border-right: 1px solid $black-color;
+      border-top: 1px solid $color-dark-complementary;
+      border-left: 1px solid $color-dark-complementary;
+      border-right: 1px solid $color-dark-complementary;
       overflow: hidden;
       padding: 10px;
 
       &:last-child {
-         border-bottom: 1px solid $black-color;
+         border-bottom: 1px solid $color-dark-complementary;
       }
    }
 

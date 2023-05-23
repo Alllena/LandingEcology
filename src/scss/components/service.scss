@@ -21,9 +21,8 @@
 
    .service__slider {
       @include slider();
-      border-radius: 30px;
-      border: 3px solid $green-color;
-      box-shadow: $shadow;
+      border-radius: 15px;
+      border: 3px solid $color-gradient-stop;
    }
 
    .service__detail {
@@ -37,7 +36,7 @@
       padding: 5px 0;
       @include flex-v-center();
       gap: 10px;
-      border-bottom: 1px solid $green-color;
+      border-bottom: 1px solid $color-dark-complementary;
       margin-bottom: 20px;
    }
 
@@ -47,6 +46,6 @@
    }
 
    .service__result {
-      border-top: 1px solid $green-color;
+      border-top: 1px solid $color-dark-complementary;
    }
 }

@@ -8,7 +8,7 @@
    }
 
    .about-as__title {
-      @include font-face(40px, 900);
+      @include font-face(40px, 900, $color: $color-dark-complementary);
       grid-column: 1 / 4;
 
    }
