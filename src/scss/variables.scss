@@ -5,12 +5,10 @@ $wrapper-width: calc($content-width + ($wrapper-offset * 2));
 
 // colors
 $color-contrast: #009900;
-$color-gradient-start: #e62314;
-$color-gradient-stop: #f19e18;
+$color-gradient-start: #000099;
+$color-gradient-stop: #0000ff;
 $color-dark-primary: #000000;
-$color-dark-complementary: #424242;
-$color-light-primary: #FDFAEC;
-$color-light-complementary: #FFFFFF;
+$color-light-primary: #ffffff;
 
 // gradient
 $gradient: linear-gradient(90deg, $color-gradient-start 0%, $color-gradient-stop 100%);

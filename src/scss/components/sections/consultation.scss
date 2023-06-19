@@ -27,7 +27,7 @@
    }
 
    .consultation__title {
-      @include font-face(40px, 900, $color: $color-dark-complementary);
+      @include font-face(40px, 900, $color: $color-dark-primary);
       margin-bottom: 20px;
    }
 

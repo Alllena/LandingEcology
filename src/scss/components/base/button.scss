@@ -6,5 +6,5 @@
    width: max-content;
    padding: 12px 25px;
    border-radius: 20px;
-   @include font-face(16px, $color: $color-light-complementary);
+   @include font-face(16px, $color: $color-light-primary);
 }

@@ -36,7 +36,7 @@
       padding: 5px 0;
       @include flex-v-center();
       gap: 10px;
-      border-bottom: 1px solid $color-dark-complementary;
+      border-bottom: 1px solid $color-dark-primary;
       margin-bottom: 20px;
    }
 
@@ -46,6 +46,6 @@
    }
 
    .service__result {
-      border-top: 1px solid $color-dark-complementary;
+      border-top: 1px solid $color-dark-primary;
    }
 }

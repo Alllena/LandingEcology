@@ -4,7 +4,7 @@
 
    .article__title_main {
       width: 70%;
-      @include font-face(42px, 900, $color: $color-dark-complementary);
+      @include font-face(42px, 900, $color: $color-dark-primary);
       margin-bottom: 40px;
 
       span {
@@ -13,7 +13,7 @@
    }
 
    .article__title {
-      @include font-face(30px, 900, $color: $color-dark-complementary);
+      @include font-face(30px, 900, $color: $color-dark-primary);
       margin-bottom: 30px;
    }
 
