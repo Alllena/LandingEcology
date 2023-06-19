@@ -77,3 +77,66 @@ link.addEventListener("click", function (event) {
 
   subList.style.transform = "translate(0, -100%)";
 });
+
+// открытие модального окна
+const openModalBtn = document.querySelector(".btn-open-modal");
+const closeModalBtn = document.querySelector(".btn-close-modal");
+const modal = document.querySelector(".modal");
+const phoneInput = document.querySelectorAll("#phone-input");
+
+openModalBtn.addEventListener("click", () => {
+  modal.classList.add("is-open");
+  document.body.style.overflow = "hidden";
+});
+
+// phoneInput.addEventListener("input", (event) => {
+//   const input = event.target;
+//   const inputLength = input.value.length;
+
+//   if (inputLength === 3 || inputLength === 7 || inputLength === 10) {
+//     input.value += " ";
+//   }
+// });
+closeModalBtn.addEventListener("click", () => {
+  modal.classList.remove("is-open");
+  document.body.style.overflow = "auto";
+});
+
+const phoneInputs = document.querySelectorAll(".phone-input");
+
+phoneInputs.forEach((phoneInput) => {
+  phoneInput.addEventListener("input", function () {
+    let value = this.value.replace(/\D/g, "");
+    let formatted = "";
+
+    for (let i = 0; i < value.length; i++) {
+      if (i == 0) {
+        formatted += "(";
+      } else if (i == 3) {
+        formatted += ") ";
+      } else if (i == 6) {
+        formatted += "-";
+      } else if (i == 8) {
+        formatted += "-";
+      }
+      formatted += value[i];
+    }
+
+    this.value = formatted;
+  });
+});
+
+const form = document.querySelector(".modal__form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const phone = phoneInput.value;
+  const email = "khatkevich.alena@gmail.com"; // замените на нужный e-mail
+  const subject = "Запрос на консультацию";
+  const body = `Пожалуйста, свяжитесь со мной для консультации по номеру телефона: ${phone}`;
+
+  const mailToLink = `mailto:${email}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailToLink;
+});
