@@ -10,7 +10,7 @@ export function updateSlider() {
     currentIndex * 100
   }%)`;
   pagination.childNodes.forEach((dot, index) => {
-    dot.style.backgroundColor = index === currentIndex ? "#000099" : "#0000ff";
+    dot.style.backgroundColor = index === currentIndex ? "#f57771" : "#f57771";
   });
 }
 

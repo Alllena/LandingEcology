@@ -1,11 +1,9 @@
 @import 'variables';
 
-@mixin font-face($size: 16px, $weight: 500, $color: $color-dark-primary, $family: $main-font-family) {
-  font-family: $family;
+@mixin font-face($size: 1em, $weight: 400, $color: $color-dark-primary) {
   font-size: $size;
   color: $color;
   font-weight: $weight;
-  font-display: swap;
 }
 
 @mixin font-gradient($text-gradient: $gradient) {
@@ -14,15 +12,8 @@
   color: transparent;
   background-image: $text-gradient;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.5px $color-gradient-stop;
-  text-stroke: 0.5px $color-gradient-stop;
-}
-
-@mixin font-stroke() {
-  -webkit-text-stroke: 0.5px $color-dark-primary;
-  text-stroke: 0.5px $color-dark-primary;
 }
 
 @mixin font-hover() {
-  color: $color-gradient-start;
+  color: $color-gradient-stop;
 }

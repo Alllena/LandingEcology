@@ -28,7 +28,6 @@
    }
 
    .article__item {
-      @include font-stroke();
       @include font-face(18px, 600);
       @include flex-v-center;
       padding: 5px 0;

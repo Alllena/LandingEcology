@@ -64,7 +64,9 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  font-family: $main-font-family;
   @include font-face();
+  font-size: 18px;
   background-color: $color-light-primary;
 }
 
