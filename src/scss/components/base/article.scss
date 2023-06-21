@@ -4,8 +4,8 @@
 
    .article__title_main {
       width: 70%;
-      @include font-face(42px, 900, $color: $color-dark-primary);
-      margin-bottom: 40px;
+      @include font-face(2.3em, 900, $color: $color-dark-primary);
+      margin-bottom: 1em;
 
       span {
          @include font-gradient();
@@ -13,8 +13,8 @@
    }
 
    .article__title {
-      @include font-face(30px, 900, $color: $color-dark-primary);
-      margin-bottom: 30px;
+      @include font-face(1.7em, 900, $color: $color-dark-primary);
+      margin-bottom: 1.7em;
    }
 
    .article__subtitle {
@@ -28,7 +28,7 @@
    }
 
    .article__item {
-      @include font-face(18px, 600);
+      @include font-face(1.1em, 500);
       @include flex-v-center;
       padding: 5px 0;
 

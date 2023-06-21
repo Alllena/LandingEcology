@@ -1,58 +1,162 @@
 .nav {
-   &.nav__main {
-      height: 90px;
-
-      .nav__sub-nav {
-         padding-right: 25px;
-         position: relative;
-
-         &::before {
-            top: 48%;
-            right: 10px;
-            background: url(../../img/arrow_down.svg) no-repeat 50% 50% / 10px 7px;
-            width: 10px;
-            height: 10px;
-            content: "";
-            position: absolute;
-            transition: transform .5s;
-         }
-
-
-         .nav__sub-list {
-            background-color: $color-light-primary;
-            position: absolute;
-            left: -15px;
-            top: 100%;
-            width: max-content;
-            padding: 5px 15px 15px;
-            transition: transform 0.5s ease;
-            transform: translate(0, -100%);
-            z-index: -999;
-            @include flex-column-start;
-         }
-      }
-   }
-
-}
-
-.nav__list {
+   @include flex-all-center;
    height: 100%;
-   @include flex-all-sb();
-   gap: 20px;
 
-
-
-   .nav__item {
+   &__list {
+      @include flex-all-sb(20px);
       height: 100%;
    }
 
-   .nav__link {
-      @include flex-all-center;
+   &__item {
       height: 100%;
-      @include font-face(18px);
+      @include flex-all-center;
+   }
+
+   &__link {
+      display: block;
+      @include flex-all-center;
+      @include font-face;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      height: 100%;
 
       &:hover {
          @include font-hover();
+         transition: color 0.3s ease;
+      }
+   }
+
+   &.nav-visible {
+      height: 100%;
+   }
+}
+
+.nav-visible .drop-down {
+   position: relative;
+
+   .nav__list {
+      height: min-content;
+      display: none;
+      background-color: $color-light-complementary;
+      @include flex-column-start;
+      position: absolute;
+      left: -1em;
+      top: 90px;
+      width: max-content;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(1, 0.9);
+      transform-origin: left top;
+      transition: all 0.3s ease-out;
+      padding: 1em 1em 1.5em 1.5em;
+      border-radius: 0 0 10px 10px;
+      box-shadow: inset 0.1rem -0.1rem 0.2rem #aaa;
+
+      &.active {
+         opacity: 1;
+         visibility: visible;
+         transition: all 0.3s ease-out;
+         transform: scale(1);
+      }
+
+      .nav__link {
+         padding: 0.5em 2em;
+      }
+   }
+}
+
+.drop-down {
+   .nav__link {
+      @include flex-all-center(0.5em);
+
+      path {
+         transition: fill 0.3s ease;
+      }
+
+      &:hover path {
+         fill: $color-contrast-dark;
+         transition: fill 0.3s ease;
+      }
+   }
+}
+
+nav.nav-side {
+   z-index: 100000;
+   position: fixed;
+   left: 100%;
+   top: 50%;
+   height: auto;
+   transform: translateY(-50%);
+
+   .nav__list {
+      @include flex-column-start(3px);
+   }
+
+   .nav__item {
+      padding: 0 0;
+      height: max-content;
+      height: 60px;
+      position: relative;
+   }
+
+   .nav__link {
+      text-align: center;
+      position: absolute;
+      transition: all 0.5s ease-out;
+      padding: 0 15px;
+      border-radius: 0 10px 10px 0;
+      box-shadow: inset -0.1rem -0.1rem 0.2rem #aaa;
+      background: $color-light-complementary;
+      left: 0;
+      top: 0;
+
+      &:hover {
+         transition: all 0.5s ease-out;
+         transform: translateX(-100%);
+      }
+
+      &::after {
+         background: $color-light-complementary;
+         position: absolute;
+         content: "";
+         height: 60px;
+         width: 60px;
+         border-radius: 10px 0 0 10px;
+         box-shadow: inset 0.1rem -0.1rem 0.2rem #aaa;
+         left: -61px;
+         top: 0;
+         bottom: 0;
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: 30px 30px;
+      }
+
+      &_outsourcing::after {
+         background-image: url("/img/handshake.svg");
+      }
+
+      &_monitor::after {
+         background-image: url("/img/loop2.svg");
+      }
+
+      &_waste::after {
+         background-image: url("/img/waste.svg");
+      }
+
+      &_air::after {
+         background-image: url("/img/industry2.svg");
+      }
+
+      &_water::after {
+         background-image: url("/img/waste-water.svg");
+      }
+
+      &_flora::after {
+         background-image: url("/img/tree.svg");
+      }
+
+      &_reports::after {
+         background-image: url("/img/report.svg");
       }
    }
 }

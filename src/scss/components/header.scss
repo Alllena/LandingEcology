@@ -2,23 +2,16 @@
 @import 'mixins';
 
 .header {
-   border-bottom: 1px solid $color-dark-primary;
    position: fixed;
    left: 0;
    top: 0;
    right: 0;
-   z-index: 9999;
+   z-index: 10;
    transition: transform 0.3s ease-in-out;
-   background-color: $color-light-primary;
+   @include matte-glass;
 
-   &.header-hidden {
-      transform: translateY(-100%);
+   .wrapper {
+      height: 90px;
+      @include flex-all-sb;
    }
-
-   .header__wrapper {
-      height: 100%;
-      @include flex-all-sb();
-      background-color: $color-light-primary;
-   }
-
 }

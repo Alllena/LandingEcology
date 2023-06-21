@@ -6,18 +6,21 @@ $wrapper-width: calc($content-width + ($wrapper-offset * 2));
 // colors
 $color-contrast: hsl(120, 100%, 30%);
 $color-contrast-light: hsl(3, 86%, 80%);
-$color-contrast-dark: hsl(3, 86%, 67%);
+$color-contrast-dark: #f36a62;
 $color-gradient-start: hsl(120, 100%, 20%);
 $color-gradient-stop: hsl(120, 100%, 55%);
 $color-dark-primary: #222222;
 $color-dark-complementary: #424d54;
 $color-light-primary: #ffffff;
-$color-light-complementary: #F7F0EA;
+$color-light-complementary: hsl(3, 86%, 99%);
 
 // gradient
 $gradient: linear-gradient(90deg, $color-gradient-start 0%, $color-gradient-stop 100%);
 
 
+$shadow-hover: inset 0.2rem 0.2rem 0.5rem $color-gradient-start,
+   inset -0.2rem -0.2rem 0.5rem $color-contrast,
+   0 2px 2px $color-gradient-stop ;
 $shadow: inset 0.2rem 0.2rem 0.5rem #777,
    inset -0.2rem -0.2rem 0.5rem #aaa,
    0 2px 2px #666;
