@@ -9,13 +9,14 @@ $color-contrast-light: hsl(3, 86%, 80%);
 $color-contrast-dark: #f36a62;
 $color-gradient-start: hsl(120, 100%, 20%);
 $color-gradient-stop: hsl(120, 100%, 55%);
-$color-dark-primary: #222222;
-$color-dark-complementary: #424d54;
+$color-dark-primary: hsl(0, 0%, 13%);
+$color-dark-complementary: hsl(0, 0%, 34%);
 $color-light-primary: #ffffff;
 $color-light-complementary: hsl(3, 86%, 99%);
 
 // gradient
 $gradient: linear-gradient(90deg, $color-gradient-start 0%, $color-gradient-stop 100%);
+$gradient-pink: linear-gradient(90deg, $color-contrast-dark 0%, $color-contrast-light 100%);
 
 
 $shadow-hover: inset 0.2rem 0.2rem 0.5rem $color-gradient-start,

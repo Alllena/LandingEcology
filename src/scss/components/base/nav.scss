@@ -1,11 +1,5 @@
 .nav {
    @include flex-all-center;
-   height: 100%;
-
-   &__list {
-      @include flex-all-sb(20px);
-      height: 100%;
-   }
 
    &__item {
       height: 100%;
@@ -13,9 +7,8 @@
    }
 
    &__link {
-      display: block;
       @include flex-all-center;
-      @include font-face;
+      color: $color-dark-primary;
       text-transform: uppercase;
       transition: all 0.3s ease;
       height: 100%;
@@ -25,43 +18,62 @@
          transition: color 0.3s ease;
       }
    }
-
-   &.nav-visible {
-      height: 100%;
-   }
 }
 
-.nav-visible .drop-down {
+.nav-visible {
+   height: 100%;
    position: relative;
 
    .nav__list {
-      height: min-content;
-      display: none;
-      background-color: $color-light-complementary;
-      @include flex-column-start;
-      position: absolute;
-      left: -1em;
-      top: 90px;
-      width: max-content;
-      opacity: 0;
-      visibility: hidden;
-      transform: scale(1, 0.9);
-      transform-origin: left top;
-      transition: all 0.3s ease-out;
-      padding: 1em 1em 1.5em 1.5em;
-      border-radius: 0 0 10px 10px;
-      box-shadow: inset 0.1rem -0.1rem 0.2rem #aaa;
+      height: 100%;
+      @include flex-all-sb(20px);
+   }
 
-      &.active {
-         opacity: 1;
-         visibility: visible;
+   .drop-down {
+      position: relative;
+
+      .nav__list {
+         height: min-content;
+         display: none;
+         background-color: $color-light-complementary;
+         @include flex-column-start;
+         position: absolute;
+         left: -1em;
+         top: 90px;
+         width: max-content;
+         opacity: 0;
+         visibility: hidden;
+         transform: scale(1, 0.9);
+         transform-origin: top left;
          transition: all 0.3s ease-out;
-         transform: scale(1);
+         padding: 1em 1em 1.5em 1.5em;
+         border-radius: 0 0 10px 10px;
+         box-shadow: inset 0.1rem -0.1rem 0.2rem #aaa;
+
+         &.active {
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.3s ease-out;
+            transform: scale(1);
+
+            &::after {
+               position: absolute;
+               content: "";
+               top: -18px;
+               width: 0;
+               height: 0;
+               border-left: 20px solid transparent;
+               border-right: 20px solid transparent;
+               border-bottom: 20px solid $color-light-complementary;
+            }
+         }
+
+         .nav__link {
+            padding: 0.5em 2em;
+         }
       }
 
-      .nav__link {
-         padding: 0.5em 2em;
-      }
+
    }
 }
 
@@ -81,7 +93,7 @@
 }
 
 nav.nav-side {
-   z-index: 100000;
+   z-index: 7;
    position: fixed;
    left: 100%;
    top: 50%;
@@ -157,6 +169,66 @@ nav.nav-side {
 
       &_reports::after {
          background-image: url("/img/report.svg");
+      }
+   }
+}
+
+.nav.nav-hidden {
+   height: auto;
+   display: none;
+   background: $color-light-complementary;
+   padding: 3.3em 4.4em;
+   max-height: 7%;
+
+   .nav__list {
+      @include flex-column-center;
+      padding-bottom: 50px;
+      width: 100%;
+      z-index: 1;
+   }
+
+   .nav__item {
+      border-bottom: 1px solid $color-dark-complementary;
+      width: 100%;
+
+      &.drop-down {
+         @include flex-column-center
+      }
+   }
+
+   .nav__link {
+      justify-content: center;
+      padding: 20px;
+      width: 100%;
+   }
+}
+
+.nav-hidden .drop-down {
+   .nav__list {
+      @include flex-column-center(0px);
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s linear;
+      transform-origin: center;
+      transform: translate(scale(0.6));
+      padding: 0 0;
+
+      &.open {
+         border-top: 2px solid $color-contrast-dark;
+         max-height: 500px;
+         overflow: hidden;
+         transition: all 0.5s linear;
+         position: relative;
+         z-index: 10;
+         transform-origin: center;
+         width: 100%;
+         transform: translate(scale(1));
+
+         .nav__item {
+            &:last-child {
+               border-bottom: none;
+            }
+         }
       }
    }
 }
