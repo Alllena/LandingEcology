@@ -1,6 +1,6 @@
 .footer {
    @include matte-glass();
-   padding-top: 75px;
+   padding-top: 35px;
    border-top: 1px solid $color-contrast;
 
    &::after {
@@ -17,7 +17,7 @@
       z-index: -1;
    }
 
-   .footer__wrapper {
+   .wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto 1fr auto;
@@ -42,11 +42,15 @@
    }
 
    .footer__contacts {
-      @include flex-column-end(5px);
+      @include flex-column-end(10px);
+   }
+
+   .nav.nav-footer {
+      @include flex-column-start (10px)
    }
 
    .nav__list {
-      @include flex-column-start(5px);
+      @include flex-column-start(10px);
    }
 
    .contacts__link,
