@@ -1,34 +1,67 @@
-.about-as {
+.about {
 
-   .about-as__wrapper {
+   .wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto 1fr 1fr;
-      gap: 50px;
+      gap: 35px;
    }
 
-   .about-as__title {
+   .about__title {
       @include font-face(40px, 900, $color: $color-dark-primary);
       grid-column: 1 / 4;
 
    }
 
-   .about-as__item {
+   .about__item {
       @include flex-column-start(15px);
       padding: 20px;
       border-radius: 30px;
       @include matte-glass();
    }
 
-   .about-as__content_gradient {
-      font-weight: 500;
+   .about__text {
+      font-weight: 600;
+      margin-left: 75px;
+      position: relative;
+
+      &::after {
+         position: absolute;
+         content: "";
+         height: 60px;
+         width: 60px;
+         border-radius: 10px;
+         box-shadow: $shadow;
+         left: -75px;
+         top: 0;
+         background-size: 35px 35px;
+         background-repeat: no-repeat;
+         background-position: center;
+      }
+
+      &_industries::after {
+         background-image: url("/img/practice.svg");
+      }
+
+      &_manufacture::after {
+         background-image: url("/img/industry.svg");
+      }
+
+      &_consulting::after {
+         background-image: url("/img/consulting.svg");
+      }
+
+      &_loop::after {
+         background-image: url("/img/loop.svg");
+      }
+
+      &_education::after {
+         background-image: url("/img/education.svg");
+      }
+
+      &_belief::after {
+         background-image: url("/img/belief.svg");
+      }
    }
 
-   .about-as__img-container {
-      @include flex-all-center;
-      height: 60px;
-      width: 60px;
-      border-radius: 10px;
-      box-shadow: $shadow;
-   }
 }
